@@ -86,13 +86,14 @@ function mainMenu() {
             grades[i] = grades[i] - grades[i] * 0.1;
         }
         outputEl.innerHTML = 'Decrease all grades by 10%';
+
     } else if (selection == 'remove50') {
         for (let i = 0; i < grades.length; i++) {
             if (grades[i] < 50) {
-                grades.splice[i--, 1]
+                grades.splice(i--, 1);
             }
         }
-        outputEl.innerHTML = 'Remove grades below 50';
+      outputEl.innerHTML = 'Remove grades below 50';  
     }
 }
 
