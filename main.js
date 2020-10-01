@@ -7,7 +7,7 @@ cnv.width = 800;
 cnv.height = 600;
 
 // Global Variables
-let grades = [60, 70, 45, 20, 40, 90, 100, 30, 45, 75, 40, 80];
+let grades = [60, 70, 45, 20, 40, 90, 100, 30, 45, 75, 40, 80,];
 let max = 100; // grade values should be b/t 0 and max
 
 // Main Program Loop
@@ -51,7 +51,7 @@ function mainMenu() {
         grades[0] = 40;
         outputEl.innerHTML = 'First grade to 40';
     } else if (selection == 'last50') {
-        grades[11] = 50;
+         grades[grades.length - 1] = 50;
         outputEl.innerHTML = 'Last grade to 50';
     } else if (selection == 'random100') {
         let i = Math.randomInt(0, 12);
@@ -64,7 +64,9 @@ function mainMenu() {
         grades.pop();
         outputEl.innerHTML = 'Remove the last grade';
     } else if (selection == 'count50') {
-        // Count how many grades are below 50.  Output the result.
+        if(i < 50) {
+            
+        }
         outputEl.innerHTML = 'Count grades below 50';
     } else if (selection == 'change50') {
         // Change all grades that are below 50 to be equal to 50.
